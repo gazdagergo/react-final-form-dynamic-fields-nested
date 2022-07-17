@@ -1,0 +1,23 @@
+{
+  "name": "react",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "final-form": "^4.16.1 ^4.18.0 ^4.15.0",
+    "final-form-arrays": "^3.0.0",
+    "prop-types": "^15.6.0",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-final-form": "^6.3.0",
+    "react-final-form-arrays": "^3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "latest"
+  }
+}
