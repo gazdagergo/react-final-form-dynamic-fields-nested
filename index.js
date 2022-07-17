@@ -30,7 +30,7 @@ class App extends Component {
                 workers: [
                   {
                     firstName: '',
-                    lastName: ''
+                    lastName: '',
                   },
                 ],
               },
@@ -53,7 +53,14 @@ class App extends Component {
               <FieldArray name="shifts">
                 {(fieldArrayProps) =>
                   fieldArrayProps.fields.map((name, index) => (
-                    <div key={name} style={{ border: '1px solid gray', padding: 5, margin: 5 }}>
+                    <div
+                      key={name}
+                      style={{
+                        border: '1px solid gray',
+                        padding: 5,
+                        margin: 5,
+                      }}
+                    >
                       <h3>Shift {index + 1}</h3>
                       <Field name={`${name}.startTime`} component="input" />
                       <Field name={`${name}.endTime`} component="input" />
@@ -84,6 +91,9 @@ class App extends Component {
                                 <Field
                                   name={`${name}.firstName`}
                                   component="input"
+                                  validate={(value) =>
+                                    value ? undefined : 'Required!'
+                                  }
                                 />
                                 <Field
                                   name={`${name}.lastName`}
@@ -103,7 +113,6 @@ class App extends Component {
               </FieldArray>
               <pre>{JSON.stringify(formProps, null, 2)}</pre>
             </>
-
           )}
         </Form>
       </div>
